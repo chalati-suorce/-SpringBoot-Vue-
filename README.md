@@ -1,0 +1,1 @@
+本仓库是基于Springbot+vue实现的医疗挂号小程序，前端文件在mini-wechat-app中，可以用微信开发者工具打开，在admin-api文件夹中启动后端程序
