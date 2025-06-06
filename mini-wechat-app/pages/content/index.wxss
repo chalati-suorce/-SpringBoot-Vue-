@@ -1,0 +1,83 @@
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    /* overflow: hidden; */
+    /* padding-bottom: 130rpx; */
+}
+
+.content {
+    /* background-color: #fff; */
+}
+
+.commit-row {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, calc(33.33% - 15rpx));
+    grid-gap: 20rpx 20rpx;
+}
+
+.content {
+    background: #f7f8fa;
+    height: calc(100vh - 120rpx);
+    overflow-y: scroll;
+    word-break: break-all;
+}
+
+.content .row-left {
+    max-width: 70%;
+}
+
+.content .row-left image {
+    min-height: 70rpx;
+    max-height: 70rpx;
+    min-width: 70rpx;
+    max-width: 70rpx;
+}
+
+.content .row-left .row-left-content {
+    background: #fff;
+    border-radius: 8rpx;
+}
+
+
+.content .row-right {
+    max-width: 70%;
+    align-self: flex-end;
+
+
+}
+
+.content .row-right image {
+    min-height: 70rpx;
+    max-height: 70rpx;
+    min-width: 70rpx;
+    max-width: 70rpx;
+}
+
+.content .row-right .row-right-content {
+    background: #fff;
+    border-radius: 4px;
+}
+
+.footer {
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 90rpx;
+}
+.btn button{
+    width: 100%;
+}
+
+.menu{
+    position: fixed;
+    right:20rpx;
+    bottom:150rpx
+}

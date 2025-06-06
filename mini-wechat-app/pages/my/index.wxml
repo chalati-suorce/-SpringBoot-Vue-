@@ -1,0 +1,20 @@
+<view class="container f-c f-a-c">
+	<view class="w100 bg p-r">
+		<image class="w100" src="" mode="aspectFill"  style="background:#37bdc5"/>
+		<view class="head p-a f-c f-a-c">
+			<image src="{{img}}" mode="aspectFit"></image>
+		</view>
+		<view class="font-white p-a font">
+			{{name}}
+		</view>
+
+	</view>
+
+	<van-cell-group class="w100">
+		<van-cell title="个人信息" wx:if="{{role=='用户'}}" is-link bindtap="jumpin" data-url="/pages/editinfo/editinfo" />
+		<van-cell title="我的挂号" is-link bindtap="jumpin" data-url="/pages/orders/index" />
+		<van-cell title="退出登录" is-link bindtap="loginout" />
+	</van-cell-group>
+
+	<Menu name="my" />
+</view>

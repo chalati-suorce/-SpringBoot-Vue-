@@ -1,0 +1,54 @@
+<view class="container boxing p20">
+	<navigator url="/pages/goods/index?id={{items.gid}}" hover-class="none" open-type="navigate" class="card mb20"
+		wx:for="{{list}}" wx:for-item="items">
+		<view class="f-r f-a-c f-j-s mb30">
+			<view class="font-grey font30 mr5">订单号: {{items.code}}</view>
+			<view class="font-grey font25 mr5">{{items.status}}</view>
+		</view>
+		<view class="f-r f-a-l mb15">
+			<image class="mr20" src="{{items.goods[0].uimg}}" mode="aspectFill" />
+			<view class="f-c w100" style="line-height:45rpx">
+				<view>
+					姓名: {{items.goods[0].uname}}
+				</view>
+				<view>
+					年龄: {{items.goods[0].age}}
+				</view>
+				<view>
+					性别: {{items.goods[0].sex}}
+				</view>
+				<view>
+					手机: {{items.goods[0].utel}}
+				</view>
+				<view>
+					身份证: {{items.goods[0].idcard}}
+				</view>
+				<view>
+					医生: {{items.goods[0].dname}}
+				</view>
+				<view class="mt30 t-r font-default">
+					预约日期: {{items.goods[0].day}}
+				</view>
+				<view class="mt30 font-default" wx:if="{{items.goods[0].status=='诊断结束'}}">诊断意见:
+					{{items.goods[0].reply}}</view>
+				<view class="mt30 font-default" wx:if="{{items.goods[0].status=='已预约'}}">诊断意见:
+					暂无</view>
+
+			</view>
+
+		</view>
+		<view class="font-w600 t-r font30 mt40">
+			<view class="mt20">
+				<van-button size="small" color="#37bdc5" wx:if="{{items.status=='已预约'&&role=='医生'}}"
+					data-goods="{{items.goods}}" catchtap="open">诊断意见</van-button>
+			</view>
+		</view>
+	</navigator>
+
+	<van-dialog title="诊断意见" use-slot show="{{ show }}" showCancelButton confirm-button-color="#ee0a24"
+		bind:confirm="save">
+		<van-field model:value="{{ content }}" placeholder="" border="{{ false }}" type="textarea"
+			autosize="{{autosize}}" />
+	</van-dialog>
+	<van-dialog id="van-dialog" />
+</view>

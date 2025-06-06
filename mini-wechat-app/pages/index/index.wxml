@@ -1,0 +1,32 @@
+<view class="container boxing">
+	<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" style="height:400rpx">
+		<block wx:for="{{slides}}" wx:key="*this">
+			<swiper-item>
+				<image src="{{item}}" mode="aspectFill" class="w100"></image>
+			</swiper-item>
+		</block>
+	</swiper>
+	<van-divider contentPosition="center">疫情防控</van-divider>
+	<view class="pl20 pr20 pb20 boxing mb30" style="line-height:50rpx">
+		(一)低风险地区。在采取人员健康监测、清洁消毒、通风换气、个人防护等防控措施前提下，开展疫苗预防接种，各类重点场所正常营业或开放。
+        (二)中风险地区。除上述防控措施外，还应采取以下措施:
+        1.当发现新冠肺炎病例时，在当地疾控机构的指导下，对空调通风系统进行消毒和清洗处理，经卫生学评价合格后方可重新启用。
+        2.加强人员健康监测，查验健康码。
+        3.办公场所应严格控制进入人员数量，安排工作人员隔位、分散就坐，有条件的应采取居家办公、分散办公等措施。
+        4.商场和超市、银行、农集贸市场等营业场所应缩短营业时间，限制人员数量，停止促销等人员聚集活动，启动应急处置措施。
+        5.公共交通工具应采取控制乘客数量、分散就坐等措施。
+        6.人员密集、空间又相对密闭的场所，如宗教活动场所、洗浴场所和商品展销场所等应关门歇业。
+        (三)高风险地区。各类重点场所应停止营业或开放。
+	</view>
+	<van-divider contentPosition="center">医生信息</van-divider>
+	<view class="grid">
+		<view class="f-c f-a-c" wx:for="{{list}}">
+			<image src="{{item.img}}" class="mb20" mode="aspectFill"></image>
+			<view class="mb20">{{item.name}}</view>
+			<view>{{item.content}}</view>
+		</view>
+	</view>
+
+	<Menu name="index" />
+	<van-dialog id="van-dialog" />
+</view>

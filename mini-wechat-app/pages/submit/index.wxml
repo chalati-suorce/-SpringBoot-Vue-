@@ -1,0 +1,12 @@
+<view class="container boxing">
+    <view class="card p20 m20 pb30">
+        <van-calendar color="#37bdc5" show-title="{{false}}" min-date="{{ minDate }}" poppable="{{ false }}" show-confirm="{{ false }}"
+            class="calendar" bind:confirm="confirm" />
+    </view>
+
+    <view class="p20 mt50 btn">
+        <van-button color="#37bdc5" class="w100" bindtap="submit">预约</van-button>
+    </view>
+
+    <van-dialog id="van-dialog" />
+</view>

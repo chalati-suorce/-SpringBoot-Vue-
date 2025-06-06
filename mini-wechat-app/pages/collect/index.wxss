@@ -1,0 +1,20 @@
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom:30rpx;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    /* overflow: hidden; */
+}
+
+.row {
+    background-color: #fff;
+    height:150rpx;
+}
+
+.row image {
+    min-height: 150rpx;
+    max-height: 150rpx;
+    min-width: 150rpx;
+    max-width: 150rpx;
+}

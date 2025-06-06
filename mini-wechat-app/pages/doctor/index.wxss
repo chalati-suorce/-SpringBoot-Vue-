@@ -1,0 +1,22 @@
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    /* overflow: hidden; */
+    padding-bottom: 130rpx;
+}
+
+.content {
+    /* background-color: #fff; */
+}
+
+.commit-row {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, calc(33.33% - 15rpx));
+    grid-gap: 20rpx 20rpx;
+}

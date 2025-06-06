@@ -1,0 +1,44 @@
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom: 120rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+    /* overflow: hidden; */
+}
+
+
+.row image {
+    width: 150rpx;
+    height: 170rpx;
+    border-radius: 20rpx;
+}
+
+.row {
+    width: 100%;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+
+.row-child {
+    background-color: #fff;
+    border-radius: 20rpx;
+}
+
+.van-dropdown-menu {
+    box-shadow: none !important
+}
+
+.grid {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20rpx;
+}
+
+.grid image {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+}

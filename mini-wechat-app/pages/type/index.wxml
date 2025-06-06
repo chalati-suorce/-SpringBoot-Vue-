@@ -1,0 +1,24 @@
+<view class="container boxing">
+	<van-search model:value="{{ name }}" placeholder="请输入搜索关键词" shape="round" bind:change="getData" />
+
+	<view class="f-r mt10 type-list">
+		<van-sidebar active-key="{{ activeKey }}" bind:change="sidebarChange">
+			<van-sidebar-item title="{{item}}" wx:for="{{types}}" />
+		</van-sidebar>
+
+		<view class="right h100 boxing p10">
+			<navigator url="/pages/doctor/index?id={{item.id}}" hover-class="none" open-type="navigate"
+				class="row boxing p10 pb30" wx:for="{{list}}">
+				<view class="row-child boxing">
+					<image class="" src="{{item.img}}" mode="aspectFill" />
+					<view class="pl20 pr20 t-c mb10" style="overflow:hidden">
+						{{item.name}}
+					</view>
+				</view>
+			</navigator>
+		</view>
+	</view>
+
+	<Menu name="type" />
+	<van-dialog id="van-dialog" />
+</view>

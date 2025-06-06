@@ -1,0 +1,24 @@
+<view class="login f-r f-a-c f-j-c">
+	<image class="w100 h100 p-a" src="" style="top:0;bottom:0;left:0;background:#37bdc5" />
+    <view class="f-c f-a-c f-j-c p-a boxing"
+		style="height:100%;width:100%;z-index:2;top:0;bottom:0;left:0;padding:0 40rpx;">
+		<van-radio-group value="{{ type }}" bind:change="onChange" class="w100  boxing font28">
+            
+			<view class="f-r f-a-c f-j-l van-cell p30">
+				<van-radio name="用户" class="mr30">用户</van-radio>
+				<van-radio name="医生">医生</van-radio>
+			</view>
+		</van-radio-group>
+		<van-field model:value="{{user}}" name="用户名" label="用户名" class="w100" placeholder="用户名" />
+		<van-field model:value="{{pwd}}" type="password" name="密码" label="密码" class="w100" placeholder="密码" />
+		<view bindtap="register" class="font28 t-r w100 font-white" style="padding: 20rpx 30rpx 0;z-index:999">没有账号?点击注册
+		</view>
+		<view style="margin-top: 16px;width:100%">
+			<van-button block type="info" bindtap="login" color="#6bd6dc">
+				登录
+			</van-button>
+		</view>
+	</view>
+
+	<van-toast id="van-toast" />
+</view>

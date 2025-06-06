@@ -1,0 +1,14 @@
+<view class="container f-c f-a-c boxing">
+	<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" style="height:400rpx;width:100%">
+		<block wx:for="{{slides}}">
+			<swiper-item>
+				<image src="{{item}}" mode="aspectFill" class="w100"></image>
+			</swiper-item>
+		</block>
+	</swiper>
+	<van-cell-group class="w100">
+		<van-cell is-link="{{true}}" wx:for="{{list}}" title="{{item.name}}" value="{{item.time}}" bindtap="jumpin" data-url="/pages/newsdetail/index?id={{item.id}}" />
+	</van-cell-group>
+
+	<Menu name="news" />
+</view>

@@ -1,0 +1,8 @@
+.login{
+    padding:30rpx;
+    /* padding-top:15vh */
+}
+
+.van-cell {
+    background-color: #ffffff8c !important;
+}

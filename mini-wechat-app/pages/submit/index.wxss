@@ -1,0 +1,48 @@
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    /* overflow: hidden; */
+    /* padding-top: 200rpx; */
+}
+
+.content {
+    background-color: #fff;
+}
+
+.commit-row {
+    border-bottom: 1px solid #eaeaea;
+}
+
+
+.card {
+    background-color: #fff;
+    border-radius: 10rpx;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, calc(33.33% - 15rpx));
+    grid-gap: 20rpx 20rpx;
+}
+
+.row {
+    border: 1rpx solid #e4e4e4;
+    height: 80rpx;
+    border-radius: 10rpx;
+}
+
+.row-active {
+    border: 1rpx solid #37bdc5;
+    background: #37bdc5;
+    color: #fff;
+}
+
+.btn button {
+    width: 100%;
+}
+
+.calendar {
+    --calendar-height: 800rpx;
+}

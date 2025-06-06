@@ -1,0 +1,26 @@
+<view class="container boxing">
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" style="height:500rpx" interval="{{2000}}" duration="{{500}}">
+        <block wx:for="{{[info.img]}}" wx:key="*this">
+            <swiper-item>
+                <image src="{{item}}" mode="aspectFill" class="w100 h100"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <van-cell-group>
+        <van-cell title="科室" value="{{info.type}}" />
+        <van-cell title="医生" value="{{info.name}}" />
+    </van-cell-group>
+    <van-tabs active="{{ type }}" color="#37bdc5">
+        <van-tab title="医生简介" name="简介">
+            <view class="content ml20 mr20 boxing p20 mt20 f-r f-a-c f-j-s">
+                <rich-text nodes="{{info.content}}" class="aa"></rich-text>
+            </view>
+        </van-tab>
+    </van-tabs>
+
+    <van-goods-action>
+        <van-goods-action-button text="预约挂号" color="#66d7dd" bind:click="register" />
+        <van-goods-action-button text="立即咨询" color="#37bdc5" bind:click="submit" />
+    </van-goods-action>
+    <van-dialog id="van-dialog" />
+</view>

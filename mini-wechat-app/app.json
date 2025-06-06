@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/type/index",
+    "pages/my/index",
+    "pages/login/index",
+    "pages/content/index",
+    "pages/register/index",
+    "pages/doctor/index",
+    "pages/collect/index",
+    "pages/orders/index",
+    "pages/news/index",
+    "pages/newsdetail/index",
+    "pages/submit/index",
+    "pages/talk/index",
+    "pages/editinfo/editinfo"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#37bdc5",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

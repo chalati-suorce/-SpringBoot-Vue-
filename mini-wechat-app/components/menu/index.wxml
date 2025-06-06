@@ -1,0 +1,9 @@
+<van-tabbar active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item replace icon="wap-home-o" bindtap="jump" name="index" data-url="/pages/index/index">首页
+  </van-tabbar-item>
+  <van-tabbar-item replace icon="apps-o" bindtap="jump" name="type" data-url="/pages/type/index" wx:if="{{type=='用户'}}">咨询预约</van-tabbar-item>
+  <van-tabbar-item replace icon="chat-o" bindtap="jump" name="talk" data-url="/pages/talk/index">我的咨询</van-tabbar-item>
+  <van-tabbar-item replace icon="newspaper-o" bindtap="jump" name="news" data-url="/pages/news/index">科普知识
+  </van-tabbar-item>
+  <van-tabbar-item replace icon="manager-o" bindtap="jump" name="my" data-url="/pages/my/index">我的</van-tabbar-item>
+</van-tabbar>

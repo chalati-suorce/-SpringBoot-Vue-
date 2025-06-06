@@ -1,0 +1,23 @@
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom: 120rpx;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    /* overflow: hidden; */
+}
+
+
+.card{
+    background-color: #fff;
+    padding: 20rpx;
+    border-radius: 20rpx;
+}
+
+.card image{
+    min-width:150rpx;
+    max-width:150rpx;
+    min-height:150rpx;
+    max-height:150rpx;
+    border-radius: 20rpx;
+}

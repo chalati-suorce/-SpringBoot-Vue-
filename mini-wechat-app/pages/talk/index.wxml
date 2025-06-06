@@ -1,0 +1,22 @@
+<view class="container boxing">
+	<van-cell value="" is-link wx:if="{{role=='用户'}}" wx:for="{{list}}" url="/pages/content/index?uid={{item.uid}}&did={{item.did}}">
+		<view slot="icon">
+			<image mode="aspectFill" src="{{item.dimg}}" style="height:100rpx;width:100rpx;border-radius: 50%;"></image>
+		</view>
+		<view slot="title">
+			<view class="van-cell-text pl30">与{{item.dname}}的对话</view>
+		</view>
+	</van-cell>
+
+	<van-cell value="" is-link wx:if="{{role=='医生'}}" wx:for="{{list}}" url="/pages/content/index?uid={{item.uid}}&did={{item.did}}">
+		<view slot="icon">
+			<image mode="aspectFill" src="{{item.uimg}}" style="height:100rpx;width:100rpx;border-radius: 50%;"></image>
+		</view>
+		<view slot="title">
+			<view class="van-cell-text pl30">{{item.uname}}的咨询</view>
+		</view>
+	</van-cell>
+
+	<Menu name="talk" />
+	<van-dialog id="van-dialog" />
+</view>

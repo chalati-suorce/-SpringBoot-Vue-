@@ -1,0 +1,8 @@
+<view class="container boxing p20">
+    <navigator url="/pages/goods/index?id={{item.gid}}" hover-class="none" open-type="navigate" class="row w100 boxing f-r f-a-c p-r mb20" wx:for="{{list}}">
+        <image class="" src="{{item.gimg}}" mode="aspectFill" class="mr20" />
+        <view class="font-hidden">{{item.gname}}</view>
+        <view class="p-a font25" style="top:10rpx;right:15rpx;color:#37bdc5" catchtap="del" data-id="{{item.id}}">取消收藏</view>
+    </navigator>
+    <van-dialog id="van-dialog" />
+</view>

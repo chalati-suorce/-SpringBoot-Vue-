@@ -1,0 +1,8 @@
+.container{
+    /* padding-top:10vh */
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom: 120rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+}

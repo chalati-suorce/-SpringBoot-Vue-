@@ -1,0 +1,49 @@
+<view class="container boxing">
+	<scroll-view scroll-y="{{ true }}" scroll-into-view="{{ scrollLast }}" class="content pb40 pt20" id="content">
+		<view wx:for="{{ list }}" class="f-c" id="item{{ index + 1 }}">
+			<view class="row-left p10 f-r font14" wx:if="{{ item.type=='left' }}">
+				<image mode="aspectFill" src="{{ item.img }}" style="border-radius:50%" />
+				<view class="row-left-content f-r f-a-c ml10 p10">{{item.content}}</view>
+			</view>
+			<view class="row-right p10 f-r font14" wx:if="{{ item.type=='right' }}">
+				<view class="row-right-content f-r f-a-c w100 mr10 p10">{{item.content}}</view>
+				<image mode="aspectFill" src="{{ item.img }}" style="border-radius:50%" />
+			</view>
+		</view>
+		<!-- <view class="font25 t-c p30 font-grey mb100" wx:if="{{ list[list.length-1].status=='已完成' }}">
+			<view>医生已完成本次诊断,请进入个人中心查看诊断意见</view>
+			<view>{{item.time}}</view>
+		</view> -->
+	</scroll-view>
+	<view class="footer f-r f-a-c f-j-s boxing">
+		<van-field model:value="{{ content }}" class="w100 h100" placeholder="请输入内容..." />
+		<van-button style="width:160rpx;height:100%" class="btn" bindtap="save">发送</van-button>
+	</view>
+
+	<view class="menu font-default" wx:if="{{type=='医生'}}">
+		<view class="mb50" bindtap="onClickHide">
+			查看病历
+		</view>
+		<!-- <view bindtap="over" wx:if="{{ list[list.length-1].status!=='已完成' }}">
+			结束诊断
+		</view> -->
+	</view>
+
+	<van-overlay show="{{ show }}" bind:click="onClickHide">
+		<van-cell-group>
+			<view class="f-r f-a-c f-j-c pt30" style="background:#fff">
+				<image class="" src="{{user.img}}" mode="aspectFill" style="height:200rpx;width:200rpx" />
+			</view>
+			<van-cell title="姓名" value="{{user.name}}" />
+			<van-cell title="性别" value="{{user.sex}}" />
+			<van-cell title="年龄" value="{{user.age}}" />
+			<van-cell title="手机号" value="{{user.tel}}" />
+			<van-cell title="身份证号" value="{{user.idcard}}" />
+		</van-cell-group>
+	</van-overlay>
+
+	<van-dialog use-slot bind:confirm="confirm" title="请输入诊断意见" show="{{ show1 }}" show-cancel-button>
+		<van-field model:value="{{ reply }}" label="" type="textarea" placeholder="" autosize="{{autosize}}" border="{{ false }}" />
+	</van-dialog>
+	<van-dialog id="van-dialog" />
+</view>
